@@ -3,20 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/resest.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/651e80f994.js" crossorigin="anonymous"></script>
   <title>Daily UI n°02</title>
 </head>
 
 <body>
-  <header id="header">
+  <div class="window wrapper">
+    <header id="header" class="title-bar">
+      <h1 class="main-title title-bar-text">Checkout</h1>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </header>
+    
+    <main id="main">
+      <section class="progress-bar">
+        <div class="circle checked">
+          <i class="fas fa-shopping-cart checked"></i>
+        </div>
+        <div class="line filled"></div>
+        <div class="circle doing">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="line unfilled"></div>
+        <div class="circle unchecked">
+          <i class="fas fa-check-circle"></i>
+        </div>
+      </section>
 
-  </header>
+      <section class="payment-type">
+        <h2 class="subtitle">Méthode de paiement</h2>
+        <div class="payment-options">
+          <div class="mastercard payment">
+            <button>
+              <i class="fab fa-cc-mastercard"></i>
+            </button>
 
-  <main id="main">
+          </div>
+          <div class="visa payment">
+            <button>
+              <i class="fab fa-cc-visa"></i>
+            </button>
+          </div>
+          <div class="paypal payment">
+            <button>
+              <i class="fab fa-cc-paypal"></i>
+            </button>
+          </div>
+        </div>
+      </section>
 
-  </main>
-
-  <footer id="footer">
-
-  </footer>
+      <section class="details">
+        <h2 class="subtitle">Détails</h2>
+  
+      </section>
+    </main>
+  
+    <footer id="footer">
+  
+    </footer>
+  </div>
 </body>
 </html>

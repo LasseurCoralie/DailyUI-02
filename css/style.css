@@ -1,0 +1,140 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 10vmin;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+div.wrapper{
+  width: 100%;
+}
+
+h1.main-title, h2.subtitle{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+main#main{
+  padding: 5vmin;
+}
+
+
+/* HEADER */
+header#header{
+  text-align: center;
+}
+
+h1.main-title{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+
+/* PROGRESS BAR */
+main#main section.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#main section.progress-bar div.circle{
+  height: 25px;
+  width: 25px;
+  box-sizing: border-box;
+  background-color: silver;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+main#main section.progress-bar div.circle::before{
+  position: absolute;
+  bottom: -15px;
+  margin-left: 0;
+}
+
+main#main section.progress-bar div.checked::before{
+  content:'panier';
+  text-shadow: 1px 1px 0 #fff;
+  color: grey;
+}
+
+main#main section.progress-bar div.doing::before{
+  content:'paiement';
+}
+
+main#main section.progress-bar div.unchecked::before{
+  content:'confirmation';
+}
+
+main#main section.progress-bar div.doing{
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+
+i.checked{
+  color: grey;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+main#main section.progress-bar div.line {
+  height: 1px;
+  width: 30px;
+  background-color: black;
+  margin: 0 .5em;
+}
+
+/* PAYMENT TYPE */
+h2.subtitle{
+  font-size: 1.7em;
+}
+
+section.payment-type{
+  margin-top: 3em;
+}
+
+section.payment-type div.payment-options{
+  display: flex;
+  justify-content:space-between;
+  width: 100%
+}
+
+section.payment-type div.payment-options div.payment{
+  position: relative;
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.payment-type div.payment-options div.payment:first-child{
+  margin-left: 0;
+}
+
+section.payment-type div.payment-options div.payment::after{
+  position: absolute;
+  bottom: -15px;
+}
+
+section.payment-type div.payment-options div.mastercard::after{
+  content: "mastercard";
+}
+
+section.payment-type div.payment-options div.paypal::after{
+  content: "paypal";
+}
+
+section.payment-type div.payment-options div.visa::after{
+  content: "visa";
+}
+
+
+/* DETAILS SECTION */
+
+section.details{
+  margin-top: 3em;
+}
