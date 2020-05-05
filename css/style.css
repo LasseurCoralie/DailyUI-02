@@ -99,7 +99,7 @@ section.payment-type{
 
 section.payment-type div.payment-options{
   display: flex;
-  justify-content:space-between;
+  justify-content: center;
   width: 100%
 }
 
@@ -113,6 +113,10 @@ section.payment-type div.payment-options div.payment{
 
 section.payment-type div.payment-options div.payment:first-child{
   margin-left: 0;
+}
+
+section.payment-type div.payment-options div.payment:last-child{
+  margin-right: 0;
 }
 
 section.payment-type div.payment-options div.payment::after{
@@ -137,4 +141,28 @@ section.payment-type div.payment-options div.visa::after{
 
 section.details{
   margin-top: 3em;
+}
+
+
+/* MEDIA QUERIES - DESKTOP VERSION */
+@media all and (min-width: 650px){
+
+  div.desktop-v{
+    display: flex;
+    justify-content: center;
+  }
+  /* PAYMENT TYPE */
+  section.payment-type{
+    margin-right: 5%;
+    width: 50%;
+  }
+
+  section.details{
+    width: 50%;
+    margin-left: 5%;
+  }
+  
+  section.payment-type div.payment-options{
+    justify-content: left;
+  }
 }
