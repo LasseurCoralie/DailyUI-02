@@ -39,7 +39,7 @@
 
       <div class="desktop-v">
         <section class="payment-type">
-          <h2 class="subtitle">Méthode de paiement</h2>
+          <h2 class="subtitle">Méthodes de paiement</h2>
           <div class="payment-options">
             <div class="mastercard payment">
               <button>
@@ -62,10 +62,39 @@
   
         <section class="details">
           <h2 class="subtitle">Détails</h2>
-    
+          <form class="payment-form">
+            <div class="field-row-stacked">
+              <label for="card-type">Type de carte</label>
+              <select id="card-type">
+                <option>Visa</option>
+                <option>Master Card</option>
+                <option>American Express</option>
+              </select>
+            </div>
+            <div class="field-row-stacked card-type input-elt">
+              <label for="card-number">Numéro de carte</label>
+              <input id="card-number" type="text" />
+            </div>
+            <div class="field-row-stacked name input-elt">
+              <label for="name">Nom du propriétaire de la carte</label>
+              <input id="name" type="text" />
+            </div>
+            <div class="field-row-stacked expiration-date input-elt">
+              <label for="expiration-date">Date d'expiration (format mm/aa)</label>
+              <input id="expiration-date" type="text" />
+            </div>
+            <div class="field-row-stacked cvv input-elt">
+              <label for="cvv">CVV</label>
+              <input id="cvv" type="text" />
+            </div>
+            <div class="save-card input-elt">
+              <input type="checkbox" id="save-card">
+              <label for="save-card">Voulez-vous sauvegarder cette carte de paiement ?</label>
+            </div>
+          </form>
         </section>
       </div>
-      
+      <button class="validate-button" type="submit">Valider mon paiement</button>
     </main>
   
     <footer id="footer">
